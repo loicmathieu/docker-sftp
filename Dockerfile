@@ -1,4 +1,9 @@
+########################################################
+# This dockerfile will launch an SFTP serveur  via SSHD
+########################################################
 FROM centos
+
+MAINTAINER Loic Mathieu <loicmathieu@free.fr>
 
 RUN yum -y install openssh-server && rm -rf /var/cache/yum/*
 
