@@ -12,6 +12,7 @@ RUN  ssh-keygen -f "/etc/ssh/ssh_host_rsa_key" -N '' -t rsa &&\
      ssh-keygen -f "/etc/ssh/ssh_host_ed25519_key" -N '' -t ed25519
 
 RUN useradd -ms /bin/bash guest && echo 'guest:guest' | chpasswd
+RUN echo "root:root" | chpasswd
 
 EXPOSE 22
 
